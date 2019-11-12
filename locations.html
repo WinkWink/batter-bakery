@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Locations Batter Bakery</title>
+	<link rel="stylesheet" type="text/css" href="style/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/c2b2a544ef.js"></script>
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+      	margin-top: 80px;
+        height: 80%;
+        margin-bottom: 80px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+</head>
+<body>
+<div class="navigation">
+	<a href="index.html"><img src="images/logo.png" class="logo"></a>
+	<ul class="nav-list">
+		<li><a href="catering.html">Catering</a></li>
+		<li><a href="menus.html">Menus</a></li>		
+		<li><a href="locations.html">Locations</a></li>
+		<li><a href="about.html">About</a></li>
+	</ul>
+</div>
+  <h1 class="about-title">Locations</h1>
+  <div id="map"></div>
+
+ <footer>
+	<div class="footers">
+		<i class="fab fa-instagram"></i>
+		<i class="fab fa-twitter-square"></i>
+		<i class="fab fa-facebook-square"></i>
+		<i class="fas fa-utensils"></i>
+	</div>
+	<div class="footers words">
+		<br>
+		Batter Bakery <br>
+		484-333-0000 <br>
+		HQ 31231 Sansom Rd <br>
+		Philadelphia PA
+	</div>
+	<div class="footers">
+		<img src="images/logo.png">
+	</div>
+	<hr>
+</footer>
+</body>
+	<script>
+	// Initialize and add the map
+	function initMap() {
+	  // The location of westPhil
+	  var westPhil = {lat: 39.955510, lng: -75.216831};
+
+	  // The map, centered at westPhil
+	  var map = new google.maps.Map(
+	      document.getElementById('map'), {zoom: 14, center: westPhil});
+	  // The marker, positioned at westPhil
+	  var marker = new google.maps.Marker({position: westPhil, map: map});
+	}
+
+	</script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATFxN1o84fc_2UCviJD9eokKEnOGrp8sU&callback=initMap"
+  type="text/javascript"></script>
+</html>
